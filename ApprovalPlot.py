@@ -4,11 +4,9 @@ import numpy as np
 # Code to generate plot of Trump COVID-19 Approval Rating based on 538's polling data
 
 new_df = pd.read_csv('./covid_approval_polls_adjusted.csv')
-#sub_df = new_df.drop_duplicates(subset=['startdate'])
 sub_df = new_df[new_df['party']=='all']
 print(sub_df)
 plt.plot(sub_df['startdate'], sub_df['approve_adjusted'], marker='o', linestyle='--', color='g', label='Approval')
-#plt.plot(df['startdate'], df['disapprove_adjusted'], marker='o', linestyle='--', color='r', label='Disapproval')
 plt.xlabel('Polling Date [Ranges from 02/02/20 to 07/30/20]')
 plt.ylabel('% Approval (all Americans)')
 plt.title("Approval Rating for Trump's Handling of COVID-19 from Polling Conducted Over 02/02/20 to 07/30/20")

@@ -20,5 +20,5 @@ plt.yticks(yticks)
 # fontsize of the tick labels
 plt.legend()
 plt.text(2/2/20,95,"Data Visualization Created by Ayush Vikram, from FiveThirtyEight's Polling Data")
-#plt.style.use('fivethirtyeight')
+plt.style.use('fivethirtyeight')
 plt.show()
