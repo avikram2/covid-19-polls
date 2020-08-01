@@ -6,6 +6,7 @@ df = pd.read_csv('./covid_concern_toplines.csv')
 df = df[df['subject'] == 'concern-economy']
 df = df[df['party'] == 'all']
 df = df.iloc[::-1]
+print(len(df))
 plt.plot(df['modeldate'], df['very_estimate'], label='Very Concerned')
 plt.plot(df['modeldate'], df['somewhat_estimate'], label='Somewhat Concerned')
 plt.plot(df['modeldate'], df['not_very_estimate'], label='Not Very Concerned')
