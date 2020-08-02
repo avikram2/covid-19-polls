@@ -5,7 +5,7 @@ import numpy as np
 df = pd.read_csv('./covid_concern_toplines.csv')
 df = df[df['subject'] == 'concern-infected']
 df = df[df['party'] == 'all']
-df = df.iloc[::-1] #flip the dataframe as most recent data was originally at the top
+df = df.iloc[::-1]  # flip the dataframe as most recent data was originally at the top
 print(len(df))
 plt.plot(df['modeldate'], df['very_estimate'], label='Very Concerned')
 plt.plot(df['modeldate'], df['somewhat_estimate'], label='Somewhat Concerned')
